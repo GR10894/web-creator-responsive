@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.hero-section button, .packages button {
+  transition: transform 0.5s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+body {
+  overflow-x: hidden;
+  background-color: rgb(19,25,33);
+}
+*  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+ html {
+  scroll-snap-type: y mandatory;
+  overflow: auto;
+}
+
+header {
+  scroll-snap-align: start;
+}
+
+/** Navbar **/
+.navbar {
+    height: 60px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(19,25,33);
+    color: white;
+    font-size: 1rem;
+}
+
+.navbar a {
+    color: white;
+    font-size: 1.5vw;
+    text-decoration: none;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.logo {
+    padding-top: 5px;
+    background-image: url(Rithwin.jpg);
+    background-size: cover;
+    height: 4vw;
+    width: 4vw;
+    border-radius: 50%;
+}
+
+/* Hero Section */
+.hero-section {
+  background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(hero-img.jpg);
+  height: 100vh;
+  background-size: cover;
+  color: #fff;
+  font-size: 4.5vmin;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hero-section button {
+  height: 50px;
+  width: 150px;
+  font-size: 1.25rem; /* Changed to rem for consistency */
+  font-weight: 500;
+  border-radius: 25px;
+  color: #fff;
+  background-color: rgb(19,25,33);
+  border: 2px solid #fff;
+  transition: transform 0.5s ease; /* Added transition for scaling */
+}
+
+.hero-section button:hover {
+  transform: scale(1.05); /* Changed scale to transform */
+}
+
+.hero-section button:active {
+  color: rgb(19,25,33);
+  background-color: #fff;
+  border: 2px solid rgb(19,25,33);
+}
+
+/* Cards */
+.card {
+    border: 1px solid hsl(0, 0%, 80%);
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(128, 128, 128, 0.5);
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    max-width: 450px;
+    height: 80vh;
+    display: inline-block;
+    transition: transform 0.5s ease; /* Added transition for scaling */
+}
+
+.card:hover {
+    transform: scale(1.02); /* Changed scale to transform */
+}
+
+.card img {
+    width: 100%; /* Ensures images are responsive and preserve aspect ratio */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.card h2 {
+    font-family: 'arial', sans-serif;
+    margin: 0;
+    color: #fff;
+    text-decoration: underline;
+    padding-bottom: 10px;
+}
+
+.card p {
+    color: whitesmoke;
+    padding-bottom: 10px;
+}
+
+/* Packages */
+.cards {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.packages {
+  scroll-snap-align: start;
+  text-align: center;
+  color: white;
+  /* height: 100vh; */
+  width: 100%;
+  background-color: rgb(19,25,33);
+}
+
+.packages h1 {
+  text-decoration: underline;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.packages button {
+  color: rgb(19,25,33);
+  background-color: #fff;
+  border: 2px solid rgb(19,25,33);
+  height: 50px;
+  width: 150px;
+  font-size: 1.25rem; /* Changed to rem for consistency */
+  font-weight: 500;
+  border-radius: 25px;
+  transition: transform 0.5s ease; /* Added transition for scaling */
+}
+
+.packages button:hover {
+  transform: scale(1.05); /* Changed scale to transform */
+}
+
+.packages button:active {
+  color: #fff;
+  background-color: rgb(19,25,33);
+  border: 2px solid #fff;
+}
+
+.links {
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+}
+.link {
+  display: flex;
+  flex-direction: column;
+}
+footer {
+  padding-top: 10px;
+  height: 60px;
+}
+.btn {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1.5px solid #fff;
+  background-color: rgba(19, 25, 33, 0.815);
+  position: fixed;
+  right: 0;
+  margin-right: 7px;
+  bottom: 0;
+  margin-bottom: 7px;
+}
+
+.btn:hover {
+  scale: 1.02;
+}
+
+header ~ .btn {
+  opacity: 0;
+}
+.menu {
+  position: absolute;
+  right: 0;
+  padding-right: 10px;
+  top: 0;
+  padding-top: 10px;
+  height: 20px;
+  width: 40px;
+  color: #fff;
+  display: none;
+}
+@media (max-width: 850px) {
+  .card {
+    height: max-content;
+  }
+  html {
+    scroll-snap-type: none;
+  }
+  .hero-section  {
+    height: 100vh;
+  }
+  .menu {
+    display: block;
+  }
+  .navbar {
+    padding: 0;
+  }
+  .nav-content {
+    margin-top: -900px;
+    flex-direction: column;
+    height: 100vh;
+    background-color: rgb(19,25,33);
+    width: 100%;
+    justify-content: space-evenly;
+    transition: all 0.5s ease;
+  }
+  .navbar.active .nav-content {
+    margin-top: 0;
+    border-bottom-right-radius: 30%;
+  }
+  .nav-content a {
+    font-size: 2rem;
+  }
+  .logo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-left: 10px;
+    margin-top: 5px;
+    height: 55px;
+    width: 55px;
+  }
+  .cards {
+    flex-direction: column;
+  }
+}
